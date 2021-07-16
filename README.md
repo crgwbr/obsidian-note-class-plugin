@@ -22,6 +22,14 @@ Finally, add a custom CSS snippet to look for the `.primary-source` class and st
 
 That's it! Your two types of notes are visually differentiated from each other.
 
+But…what if you don't want to add YAML front mater to thousands of notes? This plugin also includes the relative path of the note's markdown file as a data attribute on the HTML element. So, if all your primary source notes are in grouped in the folder `_sources/` folder in your vault, you can use the folder itself as a stlying hook. For example:
+
+```css
+.markdown-preview-section div[data-source-path^="_sources/"] {
+    font-face: serif;
+}
+```
+
 ## Development
 
 ### Getting Started
