@@ -10,10 +10,14 @@ export default class IconsPlugin extends Plugin {
         elem: HTMLElement,
         ctx: MarkdownPostProcessorContext,
     ) => {
-        if (!ctx || !ctx.frontmatter || !ctx.frontmatter.noteClass) {
-            return;
+        // Add front matter class name to element
+        if (ctx && ctx.frontmatter && ctx.frontmatter.noteClass) {
+            elem.classList.add(ctx.frontmatter.noteClass);
         }
-        elem.classList.add(ctx.frontmatter.noteClass);
+        // Add source path as data attr
+        if (ctx.sourcePath) {
+            elem.dataset.sourcePath = ctx.sourcePath;
+        }
     };
 
     onload() {
