@@ -18,4 +18,4 @@ build:
 	yarn run build
 
 release: build
-	gh release create $(VERSION) -t $(VERSION) -n 'Release Version $(VERSION)' 'main.js' 'styles.css' 'manifest.json'
+	gh release create $(VERSION) -t $(VERSION) -n 'Release Version $(VERSION)' 'main.js' 'manifest.json'
