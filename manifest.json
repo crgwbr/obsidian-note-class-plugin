@@ -1,7 +1,7 @@
 {
     "id": "obsidian-note-class-plugin",
     "name": "Note CSS Classes",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "minAppVersion": "0.10.7",
     "description": "Add custom CSS class names to your Obsidian notes.",
     "author": "Craig Weber",
