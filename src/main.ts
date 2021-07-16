@@ -10,10 +10,10 @@ export default class IconsPlugin extends Plugin {
         elem: HTMLElement,
         ctx: MarkdownPostProcessorContext,
     ) => {
-        const noteClass = ctx.frontmatter.noteClass;
-        if (noteClass) {
-            elem.classList.add(noteClass);
+        if (!ctx || !ctx.frontmatter || !ctx.frontmatter.noteClass) {
+            return;
         }
+        elem.classList.add(ctx.frontmatter.noteClass);
     };
 
     onload() {
